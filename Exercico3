@@ -1,0 +1,49 @@
+# Nome: Maurício Affonso Reis de Souza
+# Algorítimo e Programação II
+# Exercício 3
+
+class Aluno():
+    def __init__(self, codigo, nome, matricula):
+        self.codigo = codigo
+        self.nome = nome
+        self.matricula = matricula
+
+    def imprimir(self):
+        print("Código: ",self.codigo, "\nNome: ", self.nome, "\nMatrícula:", self.matricula)
+    
+
+class AluEnsinoMedio(Aluno):
+    def __init__(self,codigo,nome,matricula,ano):
+        Aluno.__init__(self,codigo,nome,matricula)
+        self.ano = ano
+
+    def setCodigo(self, codigo):
+        self.codigo = codigo
+    def setNome(self, nome):
+        self.nome = nome
+    def setMatricula(self, matricula):
+        self.matricula = matricula
+    def setAno(self, ano):
+        self.ano = ano
+
+    def imprimir(self):
+        print("ALUNO DE ENSINO MÉDIO", "\nCódigo: ",self.codigo, "\nNome: ",self.nome,"\nMatrícula: ",self.matricula,"\nAno: ",self.ano)
+        
+
+
+class AluGraduacao(Aluno):
+    def __init__(self,codigo,nome,matricula,semestre):
+        Aluno.__init__(self,codigo,nome,matricula)
+        self.semestre = semestre
+
+    def setCodigo(self, codigo):
+        self.codigo = codigo
+    def setNome(self, nome):
+        self.nome = nome
+    def setMatricula(self, matricula):
+        self.matricula = matricula
+    def setSemestre(self, semestre):
+        self.semestre = semestre
+
+    def imprimir(self):
+        print("ALUNO DE GRADUAÇÃO", "\nCódigo: ",self.codigo, "\nAluno: ",self.nome,"\nMatrícula: ",self.matricula,"\nSemestre: ",self.semestre)
