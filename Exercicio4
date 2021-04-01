@@ -1,1 +1,80 @@
-#Mauricio
+#Maurício Affonso Reis de Spuza
+#Algorítimos e Programação II - Noite
+#Exercício da Aula 4
+
+
+class Veiculo():
+    def __init__(self, marcaV, qtdRodaV, modeloV, veloV = 0):
+        self.marca = marcaV
+        self.qtdRoda = qtdRodaV
+        self.modelo = modeloV
+        self.velo = veloV
+        
+    def acelerar(self, acelerarV):
+        if acelerarV > 0:
+            self.velo = self.velo + acelerarV
+        else:
+            print("Veículo deve acelerar velocidades positivas")
+
+    def frear(self, frearV):
+        if frearV > 0:
+            if frearV =< self.velo:
+                self.velo = self.velo - frearV
+            else:
+                print("Veículo tem a velocidade de frenagem maior que a atual de ",self.velo, " km/h")
+        else:
+            print("Veículo deve acelerar velocidades positivas")
+
+    def imprimir(self):
+        print("Marca: ",self.marca,"\nQuantidade de Rodas: ", self.qtdRoda,"\nModelo: ", self.modelo,"\nVelocidade: ",self.velo)
+        
+
+
+class Bicicleta(Veiculo):
+    def __init__(self, marcaV, qtdRodaV, modeloV, nMarchaB, bagageiroB, veloV = 0):
+        Veiculo.__init__(self, marcaV, qtdRodaV, modeloV, veloV)
+        self.nMarcha = nMarchaB
+        self.bagageiro = bagageiroB
+
+    def imprimir(self):
+        print("Tipo de Veículo: BICICLETA")
+        Veiculo.imprimir(self)
+        print("Número de marchas: ",self.nMarcha,"\nBagageiro: ", self.bagageiro)
+
+    
+
+class Automovel(Veiculo):
+    def __init__(self, marcaV, qtdRodaV, modeloV, potMotorA, veloV = 0):
+        Veiculo.__init__(self, marcaV, qtdRodaV, modeloV, veloV)
+        self.potMotor = potMotorA
+
+    def imprimir(self):
+        print("Tipo de Movimentação: AUTOMOVEL")
+        Veiculo.imprimir(self)
+        print("Potência do motor: ", self.potMotor)
+
+
+
+class Moto(Automovel):
+    def __init__(self, marcaV, qtdRodaV, modeloV, potMotorA, partidaEleM, veloV = 0):
+        Automovel.__init__(self,marcaV, qtdRodaV, modeloV, potMotorA, veloV)
+        self.partidaEle = partidaEleM
+
+    def imprimir(self):
+        print("Tipo de Veículo: MOTOCICLETA")
+        Automovel.imprimir(self)
+        print("Partida Elétrica: ", self.partidaEle)
+
+        
+
+class Carro(Automovel):
+    def __init__(self,marcaV, qtdRodaV, modeloV, potMotorA, qtdPortaC, veloV = 0):
+        Automovel.__init__(self,marcaV, qtdRodaV, modeloV, potMotorA, veloV)
+        self.qtdPorta = qtdPortaC
+
+    def imprimir(self):
+        print("Tipo de Veículo: CARRO")
+        Automovel.imprimir(self)
+        print("Quantidade de Portas: ", self.qtdPorta)
+
+
