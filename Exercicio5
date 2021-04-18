@@ -1,0 +1,44 @@
+class Pessoa:
+    def __init__(self, codigoP, nomeP, enderecoP, telefoneP):
+        self.__codigo = codigoP
+        self.nome = nomeP
+        self._endereco = enderecoP
+        self.__telefone = telefoneP
+
+    def imprimeNome(self):
+        print(self.nome)
+
+    def __imprimeTelefone(self):
+        print(self.__telefone)
+        
+    
+
+class Fisica(Pessoa):
+    def __init__(self, codigoP, nomeP, enderecoP,telefoneP, cpfF, idadeF, pesoF, alturaF):
+        Pessoa.__init__(self, codigoP, nomeP, enderecoP,telefoneP)
+        self.__cpf = cpfF
+        self.idade = idadeF
+        self.peso = pesoF
+        self.altura = alturaF
+
+    def imprimeCPF(self):
+        print(self.__cpf)
+
+    def __calculaIMC(self):
+        imc = self.peso/(self.altura * self.altura)
+        print("O IMC da pessoa é: ",imc)
+        
+
+    
+class Juridica(Pessoa):
+    def __init__(self, codigoP, nomeP, enderecoP,telefoneP,cnpjJ, inscricaoEstadualJ, qtdFuncionariosJ):
+        Pessoa.__init__(self, codigoP, nomeP, enderecoP,telefoneP)
+        self.__cnpj = cnpjJ
+        self.__inscricaoEstadual = inscricaoEstadualJ
+        self.qtdFuncionarios = qtdFuncionariosJ
+
+    def imprimeCNPJ(self):
+        print(self.__cnpj)
+
+    def __emitirNF(self):
+        print("Foi emitida a NF do CNPJ ",self.__cnpj,"\n Inscrição estadual: ", self.__inscricaoEstadual)
