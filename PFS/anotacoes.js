@@ -71,5 +71,22 @@ POSTMAN
 INSOMNIA
 THUNDERCLIENT
 
+*/
+
+/*
+COMO INSTALAR EXPRESS
+
+1) aplicar comando abaixo no terminal no bash
+    $ npm init -y
+
+1) aplicar comando abaixo no terminal no bash
+    $ npm install express
+
+
+2) alterar no arquivo package.json que foi criado
+    $ npm install express
 
 */
+
+
+
