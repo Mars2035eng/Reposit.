@@ -88,6 +88,10 @@ COMO INSTALAR EXPRESS
     "start": "node app.js"
   },
 
+
+ARTIGO
+https://blog.geekhunter.com.br/criar-crud-nodejs/
+
 */
 
 
