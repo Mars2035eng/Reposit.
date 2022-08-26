@@ -89,6 +89,12 @@ COMO INSTALAR EXPRESS
   },
 
 
+PARA RODAR O ARQUIVO
+no terminal
+
+node 'nome do arquivo'.js
+no caso: node app.js
+
 ARTIGO
 https://blog.geekhunter.com.br/criar-crud-nodejs/
 
