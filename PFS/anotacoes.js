@@ -101,4 +101,26 @@ https://blog.geekhunter.com.br/criar-crud-nodejs/
 */
 
 
+/*------------------       ANOTACOES  -------------------------------------------------------------------------
+
+--FORMA DE COLCOAR DADOS NO POSTMAN:
+{
+        "nome": "Nintendo",
+        "preco": 10
+}
+
+
+--Obs.: representa uma função () =>, ou seja function(req, res) poderia ser (req, res) =>
+
+
+--INSTALAÇÃO NODEDEMON
+no terminla
+npm install -g nodemon // para salvar na máquina
+npm install --save-dev nodemon // para salvar no projeto
+
+alterar no package.json:
+    "start": "nodemon app.js"
+    
+e para rodar o servidor: nodemon app.js
+*/
 
