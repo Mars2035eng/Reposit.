@@ -124,3 +124,7 @@ alterar no package.json:
 e para rodar o servidor: nodemon app.js
 */
 
+/*
+--npm install pg
+para instalar a bibilioteca postgre
+*/
