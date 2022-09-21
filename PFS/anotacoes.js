@@ -125,6 +125,12 @@ e para rodar o servidor: nodemon app.js
 */
 
 /*
+
+PARA ISNTALAR A BIBLIOTECA NODE POSTGRE
 --npm install pg
-para instalar a bibilioteca postgre
+
+
+REPOSITÓRIO GIT DO PROFESSOR
+https://github.com/profries/psf_2022_2_api_crud_produtos_memoria
+
 */
