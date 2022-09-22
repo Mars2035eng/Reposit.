@@ -26,7 +26,7 @@ exports.listar = function(req, res){
         }
         
     });
-    res.json(listaProdutos)
+    //res.json(listaProdutos)
     }
 
 
