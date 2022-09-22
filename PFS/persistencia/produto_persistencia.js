@@ -28,15 +28,3 @@ exports.listar = (callback) => {
     })
     console.log("Execução depois da query")
 }
-
-
-exports.listar = async () => {
-    const cliente = new Client(conexao);
-    cliente.connect();
-    try{ 
-        const resultado = await cliente.query("SELECT * from produtos");
-        cliente.end();
-        return (resultado.rows);
-    }
-    catch (err) { throw err; }
-}
