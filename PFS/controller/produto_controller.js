@@ -16,70 +16,82 @@ function geraId() {
 return idGerador++
 }
 
+//OK
 exports.listar = function(req, res){
     produtosPersistencia.listar((err, listaProdutosBD) => {
         if(err){
-            res.status(500).json({erro:err});
+            return res.status(500).json({erro:err});
         }
         else {
-            res.json(listaProdutosBD);
+            return res.json(listaProdutosBD);
         }
         
     });
-    //res.json(listaProdutos)
-    }
+}
 
-
+//OK
 exports.buscarPorId = function(req, res){
-    const id = +req.params.id;//o + transforma string em number
-    for (const produto of listaProdutos) {
-        if(produto.id == id){
-            return res.json(produto);
+    const id = req.params.id;
+    produtosPersistencia.buscarPorId(id, (err, produto) => {
+        if(err){
+            return res.status(500).json({erro:err});
         }
-    }
-    res.status(404).json({message :"Produto nao encontrado"})
-    }
+        else{
+            if(produto)
+                return res.json(produto);
+            else{
+                return res.status(404).json({erro:"Produto nao encontrado"});
+            }
+        }
+    });
+}
 
-
+//OK
 exports.inserir = function(req, res){
-    let produto = req.body;
-    produto.id = geraId()
-    listaProdutos.push(produto);
-    res.status(201).json(produto);
-    }
+    const produto = req.body;
+    produtosPersistencia.inserir(produto, (err, produtoInserido) => {
+        if(err){
+            return res.status(500).json({erro:err});
+        }
+        else{
+            return res.status(201).json(produtoInserido);
+        }
+    });
+}
 
 
+//OK
 exports.atualizar = function(req, res){
-    const id = +req.params.id;
-    let novoProduto = req.body;
-    
-    for (const produto of listaProdutos) {
-        if(produto.id == id){
-            
-            if(novoProduto.nome)
-                produto.nome = novoProduto.nome;
-            if (novoProduto.preco)
-                produto.preco = novoProduto.preco;
-    
-            return res.status(200).json(produto);
+    const produto = req.body;
+    const id = req.params.id;
+    produtosPersistencia.atualizar(id, produto, (err, produtoAtualizado) => {
+        if(err){
+            return res.status(500).json({erro:err});
         }
-    }
-    
-    res.status(404).json({message :"Produto nao encontrado"})
-    
-    }
-
-
+        else{
+            if(produtoAtualizado)
+                return res.json(produtoAtualizado);
+            else{
+                return res.status(404).json({erro:"Produto nao encontrado"});
+            }
+        }
+    });
+}
+   
+//OK
 exports.deletar = function(req, res){
-    const id = +req.params.id;
-    
-    for (const produto of listaProdutos) {
-        if(produto.id == id){
-            let index = listaProdutos.indexOf(produto);
-            listaProdutos.splice(index, 1);
-            res.status(201).json({message :"Produto removido"})
+    const id = req.params.id;
+    produtosPersistencia.deletar(id, (err, produtoDeletado) => {
+        if(err){
+            return res.status(500).json({erro:err});
         }
-    }
+        else{
+            if(produtoDeletado)
+                return res.json(produtoDeletado);
+            else{
+                return res.status(404).json({erro:"Produto nao encontrado"});
+            }
+        }
+    });
+}
     
-    res.status(404).json({message :"Produto nao encontrado"})
-    }
