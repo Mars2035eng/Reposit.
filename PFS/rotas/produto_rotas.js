@@ -22,4 +22,4 @@ router.delete('/:id', controller.deletar);
 
 
 
-module.exports = router
+module.exports = router;
