@@ -133,4 +133,18 @@ PARA ISNTALAR A BIBLIOTECA NODE POSTGRE
 REPOSITÓRIO GIT DO PROFESSOR
 https://github.com/profries/psf_2022_2_api_crud_produtos_memoria
 
+
+PARA INSTALAR A BIBLIOTECA TYPESCRIPT
+npm install --save-dev typescript
+
+
+npm install
+npm install express
+npm install --save-dev nodemon
+npm install --save-dev typescript
+npm install @types/express
+npm install @types/node
+
+
+
 */
