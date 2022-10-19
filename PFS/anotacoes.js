@@ -138,6 +138,7 @@ PARA INSTALAR A BIBLIOTECA TYPESCRIPT
 npm install --save-dev typescript
 
 
+LITA DE INSTALAÇÕES
 npm install
 npm install express
 npm install --save-dev nodemon
@@ -146,5 +147,30 @@ npm install @types/express
 npm install @types/node
 
 
+CONFIGURAÇÕES NO package.json
+
+                        {
+                          "name": "api",
+                          "version": "1.0.0",
+                          "description": "Projeto",
+                          "main": "app.js",
+                          "scripts": {
+                            "init": "tsc --init",
+                            "test": "echo \"Error: no test specified\" && exit 1",
+                            "start": "tsc && node dist/app.js"
+                          },
+                          "keywords": [],
+                          "author": "",
+                          "license": "ISC",
+                          "dependencies": {
+                            "@types/express": "^4.17.14",
+                            "@types/node": "^18.11.2",
+                            "express": "^4.18.2"
+                          },
+                          "devDependencies": {
+                            "nodemon": "^2.0.20",
+                            "typescript": "^4.8.4"
+                          }
+                        }
 
 */
