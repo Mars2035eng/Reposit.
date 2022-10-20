@@ -145,6 +145,14 @@ npm install --save-dev nodemon
 npm install --save-dev typescript
 npm install @types/express
 npm install @types/node
+npm install typeorm --save
+
+TypeORM
+npm install reflect-metadata --save
+npm install @types/node --save-dev
+npm install pg --save
+
+
 
 
 CONFIGURAÇÕES NO package.json
