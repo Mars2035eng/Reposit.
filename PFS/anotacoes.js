@@ -181,4 +181,8 @@ CONFIGURAÇÕES NO package.json
                           }
                         }
 
+
+CONFIGURAÇÕES NO tsconfig.ts
+
+
 */
