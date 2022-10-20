@@ -185,5 +185,7 @@ CONFIGURAÇÕES NO package.json
 
 CONFIGURAÇÕES NO tsconfig.json
 
+        "emitDecoratorMetadata": true, //Para trabalhar com o decorators
+        "experimentalDecorators": true,  //Para trabalhar com o decorators
 
 */
