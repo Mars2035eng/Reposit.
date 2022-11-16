@@ -9,7 +9,9 @@
    npx json-server --watch db.json
 
 
+https://www.youtube.com/watch?v=mAqYJF-yxO8
 
+minuto 22:15
 
 
 
